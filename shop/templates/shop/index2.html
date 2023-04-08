@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <style>
+        .col-md-3 {
+            display: inline-block;
+            margin-left: -4px;
+        }
+
+        .carousel-indicators .active {
+            background-color: blue;
+        }
+
+        .col-md-3 img {
+            width: 100%;
+            height: auto;
+        }
+
+        body .carousel-indicator li {
+            background-color: blue;
+        }
+
+        body .carousel-indicators {
+            bottom: 0;
+        }
+
+        body .carousel-control-prev-icon,
+        body .carousel-control-next-icon {
+            background-color: blue;;
+        }
+
+        body.no-padding {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-secondary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar scroll</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Link</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+    <div id="demo" class="carousel slide my-3" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!--Slideshow starts here-->
+    <div class="container carousel-inner no-padding">
+        {% load static %}
+        
+        <div class="carousel-item active">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="card" style="width: 18rem;">
+                <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <div class="carousel-item">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="card" style="width: 18rem;">
+                <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="carousel-item">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="card" style="width: 18rem;">
+                <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <div class="card" style="width: 18rem;">
+            <img src="{% static 'shop/Product+Photography.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <!-- Left and right controls for slide -->
+    <a class="carousel-control-prev" href="demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+
+    <div class="container">
+        <h1>Hello World Shop</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis in iste voluptatum quam nihil ea enim
+            soluta blanditiis nemo,
+            autem expedita. Unde necessitatibus esse dolorum cumque, laborum error ea voluptas impedit corporis iure
+            molestias. Deserunt ut maxime q
+            uos rerum, qui fugiat praesentium quisquam velit in quaerat doloribus nostrum dolorum et autem est nemo
+            distinctio sequi, unde dolor. Necessi
+            tatibus, quo vero maiores fugiat atque deserunt reprehenderit, minus dignissimos odit quos voluptatibus?
+            Facilis non recusandae, similique pl
+            aceat, consequuntur delectus consectetur reprehenderit dicta laboriosam, ullam fuga debitis! Voluptas
+            eveniet sit quod nam! Perferendis hic fugit, molestiae vitae atque modi necessitatibus velit reiciendis
+            explicabo neque, incidunt nulla qui at laborum eos nam dignissimos doloremque. Sit, molestiae nostrum
+            blanditiis enim ipsam deserunt inventore, consectetur perferendis saepe culpa vero quasi in labore cumque.
+            Sed dignissimos quidem placeat minima dolores. Tempora fuga incidunt, iusto commodi odit nemo dolore
+            ratione, nobis quae saepe, temporibus numquam expedita atque. Aliquid provident quis, eos odit sapiente
+            velit enim, nam labore voluptate assumenda asperiores unde quasi quae nemo nihil voluptates laborum adipisci
+            excepturi, voluptas optio culpa ratione rerum? Nam rerum atque quibusdam, magnam quam obcaecati eius porro
+            molestias expedita in sed aliquid, alias incidunt, nisi molestiae impedit dolor ex? Quae sunt fugit
+            similique numquam, quis provident officia distinctio optio minima. Provident ad culpa reprehenderit sequi
+            delectus quibusdam sapiente saepe in, doloribus blanditiis consequuntur ea minus. Doloribus at consectetur
+            minima earum. Quod sed ea modi harum dignissimos temporibus obcaecati magni recusandae, velit ipsa quaerat
+            libero nostrum voluptate aliquid consequatur qui? Veritatis iusto deserunt perferendis ad praesentium.
+            Quisquam vel eos officiis accusantium at eum nam aliquid, quibusdam atque, ullam ducimus alias ratione ipsam
+            ea, dolore quis. Cupiditate libero cumque ab, vel accusantium suscipit numquam et deserunt officiis
+            repellat. Libero illo, minus aut nemo corrupti reprehenderit enim fugit minima repellat blanditiis rem
+            commodi mollitia alias quisquam aspernatur id recusandae, ipsum quidem porro dolorum magnam nostrum autem
+            quo? Quaerat labore odio explicabo. Exercitationem voluptas ipsam voluptates, neque similique dolorum
+            reiciendis culpa impedit maiores accusantium hic a sint doloremque numquam tenetur animi unde, praesentium
+            optio veritatis temporibus. Sunt, iusto? Et provident ratione ad quasi quidem inventore similique
+            consequuntur esse debitis quis architecto distinctio, numquam, temporibus ipsam alias sequi quia blanditiis
+            ipsa recusandae quas corporis deserunt quos excepturi! Architecto asperiores ullam officia ipsam vitae esse
+            non minus rem nostrum totam, id molestiae, suscipit obcaecati! Assumenda totam molestiae, necessitatibus
+            facilis quas excepturi? Eius culpa officia sed velit autem, suscipit quidem veniam eaque atque ad dolores
+            harum ducimus nulla nihil! Perferendis harum odio quaerat aliquid dignissimos quam non voluptate incidunt,
+            nihil ipsa modi corporis, dolorem rerum iusto voluptatem voluptas optio ab at eveniet, tempora expedita enim
+            soluta iste maxime? At sequi veniam sapiente sed consectetur temporibus dolores illum autem dolor tenetur
+            necessitatibus amet asperiores dolorem eius voluptas nemo iusto quas, tempora fuga sit incidunt, architecto
+            saepe? Voluptatum fuga dolor quia consectetur iusto libero neque? Laboriosam repellat, neque et dolorem
+            explicabo voluptas minus iure maxime soluta suscipit aperiam aliquam exercitationem, voluptates facilis
+            culpa quidem voluptate quasi? Autem necessitatibus neque nam quia impedit rem molestias quam animi, fugiat,
+            amet cum! Rem sint possimus fuga sed quia perspiciatis culpa saepe in temporibus commodi quidem voluptate
+            maxime sequi esse, eveniet magni laborum impedit tenetur aperiam porro autem! Esse neque sint, laboriosam
+            voluptatum optio dolores incidunt cupiditate facere sit perspiciatis tenetur at aut soluta. Iure at in
+            eveniet, consequatur repellendus saepe quas maiores voluptates excepturi amet perferendis porro facilis quam
+            accusamus facere minus repudiandae autem minima? Quisquam laboriosam optio, dolorem quibusdam nam quia?
+            Soluta distinctio blanditiis incidunt voluptas, hic excepturi labore, nesciunt modi error debitis ex magnam
+            aliquid. A suscipit atque repudiandae corrupti assumenda et eligendi? Dolore nihil harum sapiente, iusto
+            repellendus, molestiae doloribus facere praesentium impedit voluptate commodi dicta labore saepe, velit
+            accusamus quis rem? Numquam tempora tenetur obcaecati eum minima omnis fugit veritatis, laborum impedit
+            laudantium nisi eaque nihil. Velit impedit voluptas aspernatur inventore beatae nemo, sapiente sit ab
+            dignissimos nulla voluptate explicabo fuga quam dolorem quia quidem repudiandae labore eius! Esse laudantium
+            tempore distinctio tenetur et? Deleniti quis dolorum quasi nemo facere perferendis odio officia rem iste aut
+            error ipsam minus eveniet repudiandae dolor ipsum fuga cum in, fugit eligendi vero ducimus aspernatur!
+            Voluptatem officiis, aut alias officia laboriosam fugit voluptate unde consequatur quidem perferendis a
+            distinctio. Hic possimus, accusamus consequatur rem, sapiente adipisci facilis, exercitationem ea non vero
+            fuga mollitia corrupti quos necessitatibus? Nulla illum ut facere consequatur itaque inventore ipsa,
+            mollitia eveniet cum omnis autem velit? Fuga repellat natus, praesentium et sunt ullam autem sint omnis non
+            dignissimos blanditiis mollitia nisi adipisci quasi tenetur officiis soluta nemo dicta. Error corrupti
+            repellat, excepturi sunt aut ratione suscipit nulla quibusdam dolore itaque beatae illum, rerum sapiente in.
+            Et quam assumenda architecto asperiores vel. Omnis dolorum a repellendus nostrum velit modi deleniti officia
+            quo labore accusantium sequi, laboriosam commodi porro iusto harum mollitia exercitationem quidem esse
+            fugiat veritatis nisi animi? Nam voluptate minima soluta exercitationem impedit libero laudantium sit? Est
+            laborum animi eligendi praesentium magni unde error repellat quas doloribus nisi sequi hic quos vitae, iure
+            odio cupiditate atque mollitia enim esse! Nisi hic officia eius reprehenderit ipsum. Dolorum, nulla. Aut,
+            nulla dolorem animi eaque doloremque error tempora neque aperiam quisquam odit cum architecto voluptates
+            suscipit, expedita obcaecati corrupti recusandae fugiat a necessitatibus, impedit excepturi nemo cumque
+            ratione! Atque, blanditiis nam, similique assumenda aut aliquid omnis quae nemo enim reprehenderit
+            exercitationem quam dicta modi provident distinctio libero praesentium ullam consectetur magnam accusamus
+            voluptas, dolorum unde reiciendis ipsa? Aliquam, voluptate quis suscipit sequi voluptas mollitia quae minima
+            ducimus neque laudantium quidem minus ipsam numquam laborum officia accusamus ab consequatur, error vitae
+            explicabo nesciunt, ut voluptates ratione! Excepturi itaque esse obcaecati sint vel harum consequuntur
+            error, est assumenda quasi. Earum quasi possimus dolores sequi nesciunt est sit molestias eligendi nemo quo
+            in, hic beatae cupiditate veniam et quia assumenda dolor recusandae! Inventore modi harum assumenda ut
+            accusamus, consequatur eaque. Veniam error blanditiis earum, assumenda fugiat voluptatibus quidem ab
+            voluptas, itaque at sapiente id dolorem mollitia hic nemo harum totam voluptatem, distinctio nobis sunt
+            neque. Magnam.
+        </p>
+    </div>
+</body>
+</html>
